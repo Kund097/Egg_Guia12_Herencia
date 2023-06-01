@@ -4,6 +4,7 @@ import Entidades.Electrodomestico;
 import Entidades.Lavadora;
 import Entidades.Televisor;
 import Servicios.ElectrodomesticosService;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 /**
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 public class Ej3_herencia {
 
     public static void main(String[] args) {
+        /*
         ElectrodomesticosService service = new ElectrodomesticosService();
         ArrayList<Electrodomestico> electrodomesticos = new ArrayList();
         
@@ -42,8 +44,12 @@ public class Ej3_herencia {
         electrodomesticos.add(televisor2);
         service.mostrarLista(electrodomesticos);
         service.totalVentas(electrodomesticos);
-        
+         */
+        double precio = 1234.5678;
+        DecimalFormat formato = new DecimalFormat("0,000.00");
+        String precioFormateado = formato.format(precio);
+        System.out.println(precioFormateado); // Imprime: 1,234.57
+
     }
 
-    
 }
