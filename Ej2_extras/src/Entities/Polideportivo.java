@@ -12,10 +12,16 @@ public class Polideportivo extends Edificio{
     
     @Override
     public void calcularSuperficie() {
+        double superficie;
+        superficie = 2 * (largo * ancho) + 2 * (largo * altura) + 2 * (ancho * altura);
+        System.out.println("La superficie del "+this.getClass().getSimpleName()+" es: "+superficie);
     }
-
+    //Fórmula: Volumen = Largo x Ancho x Altura
     @Override
     public void calcularVolumen() {
+        double volumen;
+        volumen = largo * ancho * altura;
+        System.out.println("El volumen del "+this.getClass().getSimpleName()+" es: "+volumen);
     }
 
     public Polideportivo() {

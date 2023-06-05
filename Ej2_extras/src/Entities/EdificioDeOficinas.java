@@ -49,28 +49,33 @@ public class EdificioDeOficinas extends Edificio {
 
     @Override
     public void calcularSuperficie() {
+        double superficie;
+        superficie = 2 * (largo * ancho) + 2 * (largo * altura) + 2 * (ancho * altura);
+        System.out.println("La superficie del " + this.getClass().getSimpleName() + " es: " + superficie);
     }
 
     @Override
     public void calcularVolumen() {
+        double volumen;
+        volumen = largo * ancho * altura;
+        System.out.println("El volumen del " + this.getClass().getSimpleName() + " es: " + volumen);
     }
 
     @Override
     public String toString() {
-        return "EdificioDeOficinas{" + "numerosDeOficinas=" + numerosDeOficinas + ", cantidadPersonasPorOficina=" + cantidadPersonasPorOficina + ", numeroDePisos=" + numeroDePisos +" "+super.toString();
+        return "EdificioDeOficinas{" + "numerosDeOficinas=" + numerosDeOficinas + ", cantidadPersonasPorOficina=" + cantidadPersonasPorOficina + ", numeroDePisos=" + numeroDePisos + " " + super.toString();
     }
-    
+
     /**
      * método cantPersonas(), que muestre cuantas personas entrarían en un piso
      * y cuantas en todo el edificio.
      */
-    
     public void cantPersonas() {
         final int PERSONAS_POR_PISO;
         final int PERSONAS_EDIFICIO;
         PERSONAS_POR_PISO = getCantidadPersonasPorOficina() * getNumerosDeOficinas();
         PERSONAS_EDIFICIO = PERSONAS_POR_PISO * getNumeroDePisos();
-        System.out.println("Cantidad de personas por piso: "+PERSONAS_POR_PISO+""
-                + "\nCantidad de personas que entrarian en el edifico: "+PERSONAS_EDIFICIO);
+        System.out.println("Cantidad de personas por piso: " + PERSONAS_POR_PISO + ""
+                + "\nCantidad de personas que entrarian en el edifico: " + PERSONAS_EDIFICIO);
     }
 }

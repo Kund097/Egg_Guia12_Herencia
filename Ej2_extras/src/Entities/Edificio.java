@@ -2,7 +2,7 @@ package Entities;
 
 /**
  * Crear una superclase llamada Edificio con los siguientes atributos: ancho,
- * alto y largo. La clase edificio tendrá como métodos: 
+ altura y largo. La clase edificio tendrá como métodos: 
  * • Método calcularSuperficie(): calcula la superficie del edificio. 
  * • Método calcularVolumen(): calcula el volumen del edifico. 
  * Estos métodos serán abstractos
@@ -11,7 +11,7 @@ package Entities;
  */
 public abstract class Edificio {
     protected double ancho;
-    protected double alto;
+    protected double altura;
     protected double largo;
 
     public Edificio() {
@@ -19,7 +19,7 @@ public abstract class Edificio {
 
     public Edificio(double ancho, double alto, double largo) {
         this.ancho = ancho;
-        this.alto = alto;
+        this.altura = alto;
         this.largo = largo;
     }
 
@@ -27,8 +27,8 @@ public abstract class Edificio {
         return ancho;
     }
 
-    public double getAlto() {
-        return alto;
+    public double getAltura() {
+        return altura;
     }
 
     public double getLargo() {
@@ -39,8 +39,8 @@ public abstract class Edificio {
         this.ancho = ancho;
     }
 
-    public void setAlto(double alto) {
-        this.alto = alto;
+    public void setAltura(double altura) {
+        this.altura = altura;
     }
 
     public void setLargo(double largo) {
@@ -53,7 +53,7 @@ public abstract class Edificio {
 
     @Override
     public String toString() {
-        return "ancho=" + ancho + ", alto=" + alto + ", largo=" + largo + '}';
+        return "ancho=" + ancho + ", alto=" + altura + ", largo=" + largo + '}';
     }
     
     
